@@ -3,109 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeph Van Iterson - Portfolio</title>
+    <title>Zeph Van Iterson - Computer Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Zeph Van Iterson</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Zeph Van Iterson, a passionate and driven Computer Engineering student at Queen’s University with a strong focus on software development, machine learning, and problem-solving. I have experience in Python, C, C++, C#, Java, and Unity, and I enjoy working on innovative projects that challenge me to grow. I am currently pursuing a Bachelor of Applied Science in Computer Engineering, with an expected graduation in April 2025.</p>
-        <div class="button-container">
-            <a href="https://github.com/ZephVanIterson" target="_blank" class="button">GitHub</a>
-            <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank" class="button">LinkedIn</a>
-            <a href="Zeph Van Iterson Resume 2025 Jan.pdf" target="_blank" class="button">Resume</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">Zeph Van Iterson</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </section>
+    </nav>
 
+    <div class="container">
+        <div class="hero" id="home">
+            <h1>Zeph Van Iterson</h1>
+            <p class="subtitle">Computer Engineer & Software Developer</p>
+            <div class="status">Recently Graduated • Queen's University</div>
+            <div class="hero-actions">
+                <div class="contact-links" id="about">
+                    <a href="mailto:zephvaniterson@gmail.com">Email</a>
+                    <a href="tel:613-299-3290">Phone</a>
+                    <a href="https://github.com/ZephVanIterson" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">LinkedIn</a>
+                </div>
+                <a href="https://github.com/ZephVanIterson/zephvaniterson.github.io/raw/main/Zeph%20Van%20Iterson%20Resume%20July%202025.pdf" 
+                   target="_blank" class="resume-btn" download>
+                    <span class="resume-icon">📄</span>
+                    Download Resume
+                </a>
+            </div>
+        </div>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="job">
-            <h3>NSERC USRA Researcher</h3>
-            <p><strong>Queen’s University MUSE Lab</strong> | <em>Summer 2024</em></p>
-            <ul>
-                <li>Awarded the NSERC Undergraduate Student Research Award to develop a research paper on Open Source Software for Social Good.</li>
-                <li>Designed and developed research software in Python to gather, analyze, and compare data from hundreds of GitHub repositories using REST API and GraphQL.</li>
-                <li>Implemented a classifier to categorize projects by their alignment with the UN’s Social Development Goals using support vector machines, random forests, and large language models.</li>
-                <li>Collaborated with professors to refine methodology and analysis.</li>
-            </ul>
+        <div class="section animate-on-scroll" id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">C</span>
+                <span class="skill">C++</span>
+                <span class="skill">Python</span>
+                <span class="skill">C#</span>
+                <span class="skill">Java</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Git</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Networking (TCP/IP)</span>
+                <span class="skill">Embedded Systems</span>
+                <span class="skill">Real-time Systems</span>
+                <span class="skill">Unity</span>
+                <span class="skill">Machine Learning</span>
+            </div>
         </div>
-        <div class="job">
-            <h3>Junior Software Engineer</h3>
-            <p><strong>Loen.Design Studio</strong> | <em>Summers 2022 & 2023</em></p>
-            <ul>
-                <li>Developed server software in Python for a distributed real-time system controlling 100+ microprocessors for an interactive art piece.</li>
-                <li>Created an SQLite database for efficient data storage and developed a GUI interface for global and client-specific settings management.</li>
-                <li>Implemented client software in C for embedded systems and added support for a custom macro language to control hardware.</li>
-                <li>Built a public-facing display showing system status and allowing data requests.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Undergraduate Teaching Assistant</h3>
-            <p><strong>Queen’s University Faculty of Engineering</strong> | <em>September 2022 - Present</em></p>
-            <ul>
-                <li>Assist students with course material, supervise labs, and mark assignments, quizzes, and final assessments for the First-Year Computer Science program.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>ESSDEV Project Manager</h3>
-            <p><strong>Queen’s University Engineering Society</strong> | <em>September 2023 - April 2024</em></p>
-            <ul>
-                <li>Led a team of five students in developing a Unity game using C#.</li>
-                <li>Organized meetings, assigned tasks, and ensured project deadlines were met.</li>
-            </ul>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
+        <div class="section animate-on-scroll" id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Applied Science, Computer Engineering</h3>
+                <div class="institution">Queen's University</div>
+                <div class="date">Graduated April 2025</div>
+                <ul class="achievements">
+                    <li>Achieved Faculty of Applied Sciences Dean's List (2024-2025)</li>
+                    <li>Received Queen's University Excellence Scholarship (2022)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section animate-on-scroll" id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <div class="company">Loen.Design Studio - Ottawa, ON</div>
+                <div class="date">May 2025 - Present</div>
+                <ul class="details">
+                    <li>Designed and implemented networked server software in Python using TCP/IP socket communication to control and monitor 100+ embedded clients in a real-time interactive system</li>
+                    <li>Developed an embedded C firmware system for 100+ microcontroller-based clients, enabling low-latency hardware control and real-time server integration</li>
+                    <li>Created an SQLite database for efficient storage of data for use in the server</li>
+                    <li>Implemented a GUI for the server that allows global server settings to be managed, and allows settings for each individual client to be managed and monitored</li>
+                    <li>Added support for a custom macro language that will be interpreted by the clients allowing them to control various hardware attached to the IO board</li>
+                    <li>Implemented a logging function that will allow an administrator to find issues and bugs</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>NSERC USRA Researcher</h3>
+                <div class="company">Queen's University MUSE Lab - Kingston, ON</div>
+                <div class="date">May - August 2024</div>
+                <ul class="details">
+                    <li>Received the NSERC Undergraduate Student Research Award to fund the development of a research paper on Open Source Software for Social Good</li>
+                    <li>Developed research software in Python to gather, analyse and compare information from hundreds of Github repositories, using REST API and GraphQL</li>
+                    <li>Researched, verified, and implemented proven techniques from other relevant research papers including state-of-the-art research</li>
+                    <li>Collaborated with other professors to refine methodology and analysis</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Undergraduate Teaching Assistant</h3>
+                <div class="company">Queen's University Faculty of Engineering - Kingston, ON</div>
+                <div class="date">September 2022 - April 2025</div>
+                <ul class="details">
+                    <li>Assisted students with questions about course material, supervised and assisted in labs</li>
+                    <li>Marked assignments, quizzes, and final assessments for a first-year engineering computer science course</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>ESSDEV Project Manager</h3>
+                <div class="company">Queen's University Engineering Society Software Development Team - Kingston, ON</div>
+                <div class="date">September 2023 - April 2024</div>
+                <ul class="details">
+                    <li>Lead and managed a group of 5 students in the development of a game in Unity using C#</li>
+                    <li>Organized meetings, assigned work, and ensured deadlines were met</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section animate-on-scroll" id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-item">
+                <h3>Sports Betting Advisor</h3>
+                <div class="date">2025</div>
+                <div class="description">
+                    A comprehensive tool for analyzing NHL betting odds across multiple bookmakers to identify value bets and find optimal lines. Built with Python for data processing and deployed with HTML/CSS. Features real-time odds comparison, implied probability analysis, and arbitrage opportunity detection. Data updates every 24 hours from major sportsbooks.
+                </div>
+                <div class="project-links">
+                    <a href="https://zephvaniterson.github.io/Sports-Betting-Advisor/" target="_blank" class="project-link">Live Demo</a>
+                    <a href="https://github.com/ZephVanIterson/Sports-Betting-Advisor" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-item">
                 <h3>AI Learning Boss Fight Game</h3>
-                <p>A Unity game using machine learning (SharpNEAT) to adapt to the player and simulate a human-like opponent. Built with C#.</p>
-            </li>
-            <li>
-                <h3>Topological Route Navigator</h3>
-                <p>A C++ program that finds the safest path on a topological map by minimizing elevation changes using a greedy algorithm.</p>
-            </li>
-        </ul>
-    </section>
+                <div class="date">2024</div>
+                <div class="description">
+                    Unity game that uses machine learning to adapt to the player and respond appropriately to simulate the experience of playing against another human, using C# and SharpNEAT
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/ZephVanIterson" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Python, C, C++, C#, Java</li>
-            <li><strong>Tools & Frameworks:</strong> MySQL, PyTorch, Git, Unity, REST API, GraphQL</li>
-            <li><strong>Machine Learning:</strong> Support Vector Machines, Random Forests, Large Language Models</li>
-            <li><strong>Soft Skills:</strong> Team Collaboration, Project Management, Problem-Solving</li>
-        </ul>
-    </section>
+            <div class="project-item">
+                <h3>Open Source SDG Classifier</h3>
+                <div class="date">2024</div>
+                <div class="description">
+                    Collected and processed data from hundreds of open-source projects, filtered by metrics like contributor count and lifespan, to build training and testing datasets. Implemented multiple classifiers, including SVM and Random Forest, and integrated LLM-based agents to assess project alignment with the UN's Sustainable Development Goals (SDGs).
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/ZephVanIterson" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+        </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at:</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:zephvaniterson@gmail.com">zephvaniterson@gmail.com</a></li>
-            <li><strong>Phone:</strong> 613-299-3290</li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">linkedin.com/in/zeph-van-iterson-128303188</a></li>
-        </ul>
-    </section>
+        <div class="section animate-on-scroll" id="contact">
+            <h2>Get In Touch</h2>
+            <div style="text-align: center;">
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">
+                    I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:zephvaniterson@gmail.com">Email Me</a>
+                    <a href="tel:613-299-3290">Call Me</a>
+                    <a href="https://github.com/ZephVanIterson" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Zeph Van Iterson. All rights reserved.</p>
-    </footer>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+            updateThemeIcon(savedTheme === 'dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            updateThemeIcon(isDark);
+            localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
+        });
+
+        function updateThemeIcon(isDark) {
+            themeIcon.textContent = isDark ? '☀️' : '🌙';
+        }
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    console.log('Animating:', entry.target.id); // Debug log
+                } else {
+                    // Optional: Remove class to re-trigger animation when scrolling back up
+                    // entry.target.classList.remove('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+            console.log('Observing:', el.id); // Debug log
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
