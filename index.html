@@ -51,7 +51,7 @@
                     <a href="https://github.com/ZephVanIterson" target="_blank">GitHub</a>
                     <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">LinkedIn</a>
                 </div>
-                <a href="https://github.com/ZephVanIterson/zephvaniterson.github.io/raw/main/Zeph%20Van%20Iterson%20Resume%20July%202025.pdf" 
+                <a href="https://github.com/ZephVanIterson/zephvaniterson.github.io/raw/main/Zeph%20Van%20Iterson%20Resume.pdf" 
                    target="_blank" class="resume-btn" download>
                     <span class="resume-icon">📄</span>
                     Download Resume
@@ -96,7 +96,7 @@
             <div class="experience-item">
                 <h3>Software Engineer</h3>
                 <div class="company">Loen.Design Studio - Ottawa, ON</div>
-                <div class="date">May 2025 - Present</div>
+                <div class="date">May - Aug 2022, May - Aug 2023, May 2025 - Present</div>
                 <ul class="details">
                     <li>Designed and implemented networked server software in Python using TCP/IP socket communication to control and monitor 100+ embedded clients in a real-time interactive system</li>
                     <li>Developed an embedded C firmware system for 100+ microcontroller-based clients, enabling low-latency hardware control and real-time server integration</li>
@@ -217,20 +217,33 @@
             themeIcon.textContent = isDark ? '☀️' : '🌙';
         }
 
-        // Scroll Animations
+        // Enhanced test to force initial styles
+        function forceInitialStyles() {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                if (!el.classList.contains('animate-in')) {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px) scale(0.98)';
+                    el.style.filter = 'blur(1px)';
+                    el.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }
+            });
+        }
+
+        // Scroll Animations - Refined for subtlety
         const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1, // Trigger when 10% visible
+            rootMargin: '0px 0px 100px 0px' // Trigger 100px before element enters viewport
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Subtle animation
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    entry.target.style.filter = 'blur(0px)';
+                    
                     entry.target.classList.add('animate-in');
-                    console.log('Animating:', entry.target.id); // Debug log
-                } else {
-                    // Optional: Remove class to re-trigger animation when scrolling back up
-                    // entry.target.classList.remove('animate-in');
                 }
             });
         }, observerOptions);
@@ -238,8 +251,11 @@
         // Observe all animate-on-scroll elements
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
-            console.log('Observing:', el.id); // Debug log
         });
+
+        // Apply initial styles immediately
+        document.addEventListener('DOMContentLoaded', forceInitialStyles);
+        forceInitialStyles(); // Run immediately as well
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
