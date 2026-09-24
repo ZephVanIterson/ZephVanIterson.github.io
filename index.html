@@ -3,195 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeph Van Iterson - Computer Engineer</title>
+    <meta name="description" content="Zeph Van Iterson - Software Developer at Cisco and Computer Engineer.">
+    <meta name="theme-color" content="#f4f1ea">
+    <meta property="og:title" content="Zeph Van Iterson - Software Developer at Cisco">
+    <meta property="og:description" content="Software Developer at Cisco and Computer Engineer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zephvaniterson.github.io/">
+    <link rel="canonical" href="https://zephvaniterson.github.io/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Zeph Van Iterson - Software Developer at Cisco</title>
+    <script>
+        document.documentElement.classList.add('js');
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            const normalizedTheme = savedTheme === 'dark-mode'
+                ? 'dark'
+                : savedTheme === 'light-mode' ? 'light' : savedTheme;
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.dataset.theme = normalizedTheme || (prefersDark ? 'dark' : 'light');
+        } catch (error) {
+            document.documentElement.dataset.theme = 'light';
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-    </div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="#home">Zeph Van Iterson</a>
-            </div>
-            <div class="nav-links">
+    <header class="site-header" id="siteHeader">
+        <nav class="nav-container" aria-label="Primary navigation">
+            <a class="nav-brand" href="#about" aria-label="Zeph Van Iterson, home">ZVI<span class="brand-dot" aria-hidden="true">.</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="themeToggle">
-                    <span class="theme-icon">🌙</span>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/></svg>
+                    <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
                 </button>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="container">
-        <div class="hero" id="home">
-            <h1>Zeph Van Iterson</h1>
-            <p class="subtitle">Computer Engineer & Software Developer</p>
-            <div class="status">Recently Graduated • Queen's University</div>
-            <div class="hero-actions">
-                <div class="contact-links" id="about">
-                    <a href="mailto:zephvaniterson@gmail.com">Email</a>
-                    <a href="https://github.com/ZephVanIterson" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">LinkedIn</a>
-                </div>
-                <a href="https://zephvaniterson.github.io/ZephVanItersonResume.pdf" 
-                   target="_blank" class="resume-btn">
-                    <span class="resume-icon">📄</span>
-                    View Resume
-                </a>
-            </div>
-        </div>
-
-        <div class="section animate-on-scroll" id="skills">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">C</span>
-                <span class="skill">C++</span>
-                <span class="skill">Python</span>
-                <span class="skill">C#</span>
-                <span class="skill">Java</span>
-                <span class="skill">SQL</span>
-                <span class="skill">Git</span>
-                <span class="skill">Linux</span>
-                <span class="skill">Networking (TCP/IP)</span>
-                <span class="skill">Embedded Systems</span>
-                <span class="skill">Real-time Systems</span>
-                <span class="skill">Unity</span>
-                <span class="skill">Machine Learning</span>
-            </div>
-        </div>
-
-        <div class="section animate-on-scroll" id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Applied Science, Computer Engineering</h3>
-                <div class="institution">Queen's University</div>
-                <div class="date">Graduated April 2025</div>
-                <ul class="achievements">
-                    <li>Achieved Faculty of Applied Sciences Dean's List (2024-2025)</li>
-                    <li>Received Queen's University Excellence Scholarship (2022)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section animate-on-scroll" id="experience">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3>Software Engineer</h3>
-                <div class="company">Loen.Design Studio - Ottawa, ON</div>
-                <div class="date">May - Aug 2022, May - Aug 2023, May 2025 - Present</div>
-                <ul class="details">
-                    <li>Designed and implemented networked server software in Python using TCP/IP socket communication to control and monitor 100+ embedded clients in a real-time interactive system</li>
-                    <li>Developed an embedded C firmware system for 100+ microcontroller-based clients, enabling low-latency hardware control and real-time server integration</li>
-                    <li>Created an SQLite database for efficient storage of data for use in the server</li>
-                    <li>Implemented a GUI for the server that allows global server settings to be managed, and allows settings for each individual client to be managed and monitored</li>
-                    <li>Added support for a custom macro language that will be interpreted by the clients allowing them to control various hardware attached to the IO board</li>
-                    <li>Implemented a logging function that will allow an administrator to find issues and bugs</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>NSERC USRA Researcher</h3>
-                <div class="company">Queen's University MUSE Lab - Kingston, ON</div>
-                <div class="date">May - August 2024</div>
-                <ul class="details">
-                    <li>Received the NSERC Undergraduate Student Research Award to fund the development of a research paper on Open Source Software for Social Good</li>
-                    <li>Developed research software in Python to gather, analyse and compare information from hundreds of Github repositories, using REST API and GraphQL</li>
-                    <li>Researched, verified, and implemented proven techniques from other relevant research papers including state-of-the-art research</li>
-                    <li>Collaborated with other professors to refine methodology and analysis</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Undergraduate Teaching Assistant</h3>
-                <div class="company">Queen's University Faculty of Engineering - Kingston, ON</div>
-                <div class="date">September 2022 - April 2025</div>
-                <ul class="details">
-                    <li>Assisted students with questions about course material, supervised and assisted in labs</li>
-                    <li>Marked assignments, quizzes, and final assessments for a first-year engineering computer science course</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>ESSDEV Project Manager</h3>
-                <div class="company">Queen's University Engineering Society Software Development Team - Kingston, ON</div>
-                <div class="date">September 2023 - April 2024</div>
-                <ul class="details">
-                    <li>Lead and managed a group of 5 students in the development of a game in Unity using C#</li>
-                    <li>Organized meetings, assigned work, and ensured deadlines were met</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section animate-on-scroll" id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-item">
-                <h3>Sports Betting Advisor</h3>
-                <div class="date">2025</div>
-                <div class="description">
-                    A comprehensive tool for analyzing NHL betting odds across multiple bookmakers to identify value bets and find optimal lines. Built with Python for data processing and deployed with HTML/CSS. Features real-time odds comparison, implied probability analysis, and arbitrage opportunity detection. Data updates every 24 hours from major sportsbooks.
-                </div>
-                <div class="project-links">
-                    <a href="https://zephvaniterson.github.io/Sports-Betting-Advisor/" target="_blank" class="project-link">Live Demo</a>
-                    <a href="https://github.com/ZephVanIterson/Sports-Betting-Advisor" target="_blank" class="project-link">View on GitHub</a>
+    <main id="main-content">
+        <section class="hero" id="about" aria-labelledby="hero-title">
+            <div class="hero-marker" aria-hidden="true">01</div>
+            <div class="hero-content">
+                <p class="status">Software Developer <span aria-hidden="true">/</span> Cisco</p>
+                <h1 id="hero-title">Zeph Van Iterson</h1>
+                <p class="subtitle">Computer Engineer &amp; Software Developer</p>
+                <div class="hero-actions">
+                    <div class="contact-links" aria-label="Contact links">
+                        <a href="mailto:zephvaniterson@gmail.com">Email</a>
+                        <a href="https://github.com/ZephVanIterson" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <a href="./ZephVanItersonResume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">View Resume <span aria-hidden="true">&#8599;</span></a>
                 </div>
             </div>
+        </section>
 
-            <div class="project-item">
-                <h3>AI Learning Boss Fight Game</h3>
-                <div class="date">2024</div>
-                <div class="description">
-                    Unity game that uses machine learning to adapt to the player and respond appropriately to simulate the experience of playing against another human, using C# and SharpNEAT
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/ZephVanIterson" target="_blank" class="project-link">View on GitHub</a>
-                </div>
+        <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading"><span class="section-number" aria-hidden="true">02</span><h2 id="skills-title">Skills</h2></div>
+            <div class="skill-groups">
+                <article class="skill-group skill-group-languages">
+                    <div class="skill-group-heading">
+                        <svg class="skill-group-icon" aria-hidden="true" viewBox="0 0 32 32">
+                            <path d="m12 8-8 8 8 8M20 8l8 8-8 8M18 4l-4 24"/>
+                        </svg>
+                        <div><span class="skill-group-number" aria-hidden="true">01</span><h3>Languages</h3></div>
+                    </div>
+                    <ul class="skill-list" aria-label="Programming languages">
+                        <li>C</li><li>C++</li><li>Python</li><li>C#</li><li>Java</li><li>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-heading">
+                        <svg class="skill-group-icon" aria-hidden="true" viewBox="0 0 32 32">
+                            <rect x="8" y="8" width="16" height="16" rx="2"/><path d="M12 1v5M20 1v5M12 26v5M20 26v5M1 12h5M1 20h5M26 12h5M26 20h5M13 13h6v6h-6z"/>
+                        </svg>
+                        <div><span class="skill-group-number" aria-hidden="true">02</span><h3>Systems &amp; Tools</h3></div>
+                    </div>
+                    <ul class="skill-list" aria-label="Systems and tools skills">
+                        <li>Linux</li><li>Networking (TCP/IP)</li><li>Embedded Systems</li><li>Real-time Systems</li><li>Git</li><li>Machine Learning</li>
+                    </ul>
+                </article>
             </div>
+        </section>
 
-            <div class="project-item">
-                <h3>Open Source SDG Classifier</h3>
-                <div class="date">2024</div>
-                <div class="description">
-                    Collected and processed data from hundreds of open-source projects, filtered by metrics like contributor count and lifespan, to build training and testing datasets. Implemented multiple classifiers, including SVM and Random Forest, and integrated LLM-based agents to assess project alignment with the UN's Sustainable Development Goals (SDGs).
+        <section class="section" id="education" aria-labelledby="education-title">
+            <div class="section-heading"><span class="section-number" aria-hidden="true">03</span><h2 id="education-title">Education</h2></div>
+            <article class="timeline-item education-item">
+                <div class="item-meta"><div class="date">Graduated April 2025</div></div>
+                <div class="item-content">
+                    <h3>Bachelor of Applied Science, Computer Engineering</h3>
+                    <div class="institution">Queen's University</div>
+                    <ul class="achievements"><li>Achieved Faculty of Applied Sciences Dean's List (2024-2025)</li><li>Received Queen's University Excellence Scholarship (2022)</li></ul>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/ZephVanIterson" target="_blank" class="project-link">View on GitHub</a>
-                </div>
+            </article>
+        </section>
+
+        <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="section-heading"><span class="section-number" aria-hidden="true">04</span><h2 id="experience-title">Work Experience</h2></div>
+            <div class="timeline">
+                <article class="timeline-item experience-item experience-current">
+                    <div class="item-meta"><div class="date">2026 - Present</div></div>
+                    <div class="item-content"><h3>Software Developer</h3><div class="company">Cisco</div></div>
+                </article>
+                <article class="timeline-item experience-item">
+                    <div class="item-meta"><div class="date">May - Aug 2022, May - Aug 2023, May 2025 - 2026</div></div>
+                    <div class="item-content"><h3>Software Engineer</h3><div class="company">Loen.Design Studio - Ottawa, ON</div>
+                        <ul class="details">
+                            <li>Designed and implemented networked server software in Python using TCP/IP socket communication to control and monitor 100+ embedded clients in a real-time interactive system</li>
+                            <li>Developed an embedded C firmware system for 100+ microcontroller-based clients, enabling low-latency hardware control and real-time server integration</li>
+                            <li>Created an SQLite database for efficient storage of data for use in the server</li>
+                            <li>Implemented a GUI for the server that allows global server settings to be managed, and allows settings for each individual client to be managed and monitored</li>
+                            <li>Added support for a custom macro language that will be interpreted by the clients allowing them to control various hardware attached to the IO board</li>
+                            <li>Implemented a logging function that will allow an administrator to find issues and bugs</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item experience-item">
+                    <div class="item-meta"><div class="date">May - August 2024</div></div>
+                    <div class="item-content"><h3>NSERC USRA Researcher</h3><div class="company">Queen's University MUSE Lab - Kingston, ON</div>
+                        <ul class="details">
+                            <li>Received the NSERC Undergraduate Student Research Award to fund the development of a research paper on Open Source Software for Social Good</li>
+                            <li>Developed research software in Python to gather, analyse and compare information from hundreds of Github repositories, using REST API and GraphQL</li>
+                            <li>Researched, verified, and implemented proven techniques from other relevant research papers including state-of-the-art research</li>
+                            <li>Collaborated with other professors to refine methodology and analysis</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item experience-item">
+                    <div class="item-meta"><div class="date">September 2022 - April 2025</div></div>
+                    <div class="item-content"><h3>Undergraduate Teaching Assistant</h3><div class="company">Queen's University Faculty of Engineering - Kingston, ON</div>
+                        <ul class="details"><li>Assisted students with questions about course material, supervised and assisted in labs</li><li>Marked assignments, quizzes, and final assessments for a first-year engineering computer science course</li></ul>
+                    </div>
+                </article>
+                <article class="timeline-item experience-item">
+                    <div class="item-meta"><div class="date">September 2023 - April 2024</div></div>
+                    <div class="item-content"><h3>ESSDEV Project Manager</h3><div class="company">Queen's University Engineering Society Software Development Team - Kingston, ON</div>
+                        <ul class="details"><li>Lead and managed a group of 5 students in the development of a game in Unity using C#</li><li>Organized meetings, assigned work, and ensured deadlines were met</li></ul>
+                    </div>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <div class="section animate-on-scroll" id="contact">
-            <h2>Get In Touch</h2>
-            <div style="text-align: center;">
-                <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">
-                    I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:zephvaniterson@gmail.com">Email Me</a>
-                    <a href="https://github.com/ZephVanIterson" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank">LinkedIn</a>
-                </div>
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading"><span class="section-number" aria-hidden="true">05</span><h2 id="projects-title">Featured Projects</h2></div>
+            <div class="project-grid">
+                <article class="project-item project-featured">
+                    <div class="project-topline"><span class="date">2025</span><span class="project-index" aria-hidden="true">01</span></div>
+                    <h3>Sports Betting Advisor</h3>
+                    <p class="description">A comprehensive tool for analyzing NHL betting odds across multiple bookmakers to identify value bets and find optimal lines. Built with Python for data processing and deployed with HTML/CSS. Features real-time odds comparison, implied probability analysis, and arbitrage opportunity detection. Data updates every 24 hours from major sportsbooks.</p>
+                    <div class="project-links"><a href="https://zephvaniterson.github.io/Sports-Betting-Advisor/" target="_blank" rel="noopener noreferrer">Live Demo <span aria-hidden="true">&#8599;</span></a><a href="https://github.com/ZephVanIterson/Sports-Betting-Advisor" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a></div>
+                </article>
+                <article class="project-item">
+                    <div class="project-topline"><span class="date">2024</span><span class="project-index" aria-hidden="true">02</span></div>
+                    <h3>AI Learning Boss Fight Game</h3>
+                    <p class="description">Unity game that uses machine learning to adapt to the player and respond appropriately to simulate the experience of playing against another human, using C# and SharpNEAT</p>
+                    <div class="project-links"><a href="https://github.com/ZephVanIterson/ESSDEV-AIBossFight" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a></div>
+                </article>
+                <article class="project-item">
+                    <div class="project-topline"><span class="date">2024</span><span class="project-index" aria-hidden="true">03</span></div>
+                    <h3>Open Source SDG Classifier</h3>
+                    <p class="description">Collected and processed data from hundreds of open-source projects, filtered by metrics like contributor count and lifespan, to build training and testing datasets. Implemented multiple classifiers, including SVM and Random Forest, and integrated LLM-based agents to assess project alignment with the UN's Sustainable Development Goals (SDGs).</p>
+                    <div class="project-links"><a href="https://github.com/ZephVanIterson/SDG-Classifier" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a></div>
+                </article>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script src="script.js"></script>
-
+        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="section-heading"><span class="section-number" aria-hidden="true">06</span><h2 id="contact-title">Get In Touch</h2></div>
+            <div class="contact-content">
+                <p>I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers.</p>
+                <div class="contact-links"><a href="mailto:zephvaniterson@gmail.com">Email Me</a><a href="https://github.com/ZephVanIterson" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/zeph-van-iterson-128303188" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
