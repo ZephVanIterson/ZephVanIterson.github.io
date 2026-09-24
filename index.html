@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zeph Van Iterson - Software Developer at Cisco and Computer Engineer.">
-    <meta name="theme-color" content="#f4f1ea">
+    <meta name="theme-color" content="#101316">
     <meta property="og:title" content="Zeph Van Iterson - Software Developer at Cisco">
     <meta property="og:description" content="Software Developer at Cisco and Computer Engineer.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zephvaniterson.github.io/">
     <link rel="canonical" href="https://zephvaniterson.github.io/">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
     <title>Zeph Van Iterson - Software Developer at Cisco</title>
     <script>
         document.documentElement.classList.add('js');
@@ -19,14 +19,13 @@
             const normalizedTheme = savedTheme === 'dark-mode'
                 ? 'dark'
                 : savedTheme === 'light-mode' ? 'light' : savedTheme;
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            document.documentElement.dataset.theme = normalizedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.dataset.theme = normalizedTheme || 'dark';
         } catch (error) {
-            document.documentElement.dataset.theme = 'light';
+            document.documentElement.dataset.theme = 'dark';
         }
     </script>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script src="script.js?v=2" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
